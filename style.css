@@ -471,7 +471,7 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: var(--transition-medium);
+    display: block;
 }
 
 .reference-card:hover .reference-image img {
@@ -766,28 +766,6 @@ section {
     background: var(--dark-color) !important;
 }
 
-.social-links {
-    display: flex;
-    gap: 1rem;
-    justify-content: end;
-}
-
-.social-links a {
-    width: 40px;
-    height: 40px;
-    background: var(--gradient-primary);
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: var(--transition-fast);
-}
-
-.social-links a:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-medium);
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {

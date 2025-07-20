@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Facturation</title>
+  <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Poppins:300);
+    body{
+      margin:0;
+      padding:0;
+      font-family:sans-serif;
+      background: linear-gradient(#30142b, #2772a1);
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+    }
+   
+
+  nav {
+      background-color: #30142b;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+   .a {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+  }
+   .a {
+    --border-right: 6px;
+    --text-stroke-color: rgba(255,255,255,0.6);
+    --animation-color: #03959e;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+  }
+  .hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+  }
+  .a:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+  }                                         
+      
+   
+
+
+    .content-center{
+      flex:1;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .form-box{
+      position:relative;
+      z-index:1;
+      text-align:center;
+      width:400px;
+      padding:40px;
+      background: rgba(0,0,0,.5);
+      box-sizing:border-box;
+      box-shadow:0 15px 25px rgba(0,0,0,.6);
+      border-radius:10px;
+    }
+    .form-box h2{
+      color:#fff;
+      margin-bottom:30px;
+    }
+    .form-box input[type="text"],
+    .form-box input[type="password"]{
+      width:100%;
+      padding:10px 0;
+      font-size:13px;
+      color:#fff;
+      margin-bottom:30px;
+      border:none;
+      border-bottom:1px solid #fff;
+      outline:none;
+      background:transparent;
+    }
+    .remember{
+      text-align:left;
+      color:#fff;
+      font-size:12px;
+      margin-bottom:10px;
+    }
+    .remember a{
+      float:right;
+      color:#289bb8;
+    }
+    .btn-anim{
+      position: relative;
+      display: inline-block;
+      padding: 10px 20px;
+      color: #289bb8;
+      font-size: 16px;
+      text-decoration: none;
+      overflow: hidden;
+      transition: .5s;
+      margin-top: 15px;
+      letter-spacing: 2px;
+      background:none;
+      border:none;
+      width:100%;
+      text-align:center;
+    }
+    .btn-anim:hover {
+      background:#289bb8;
+      color:#fff;
+      border-radius:5px;
+      box-shadow:0 0 5px #289bb8,
+                 0 0 25px #289bb8,
+                 0 0 50px #289bb8,
+                 0 0 100px #289bb8;
+    }
+    .btn-anim span{
+      position:absolute;
+      display:block;
+    }
+    .btn-anim span:nth-child(1){
+      top:0;
+      left:-100%;
+      width:100%;
+      height:2px;
+      background:linear-gradient(90deg,transparent,#289bb8);
+      animation:anim1 1s linear infinite;
+    }
+    @keyframes anim1{
+      0%{left:-100%;}
+      50%,100%{left:100%;}
+    }
+    .btn-anim span:nth-child(2){
+      top:-100%;
+      right:0;
+      width:2px;
+      height:100%;
+      background:linear-gradient(180deg,transparent,#289bb8);
+      animation:anim2 1s linear infinite;
+      animation-delay:.25s;
+    }
+    @keyframes anim2{
+      0%{top:-100%;}
+      50%,100%{top:100%;}
+    }
+    .btn-anim span:nth-child(3){
+      bottom:0;
+      right:-100%;
+      width:100%;
+      height:2px;
+      background:linear-gradient(270deg,transparent,#289bb8);
+      animation:anim3 1s linear infinite;
+      animation-delay:.5s;
+    }
+    @keyframes anim3{
+      0%{right:-100%;}
+      50%,100%{right:100%;}
+    }
+    .btn-anim span:nth-child(4){
+      bottom:-100%;
+      left:0;
+      width:2px;
+      height:100%;
+      background:linear-gradient(360deg,transparent,#289bb8);
+      animation:anim4 1s linear infinite;
+      animation-delay:.75s;
+    }
+    @keyframes anim4{
+      0%{bottom:-100%;}
+      50%,100%{bottom:100%;}
+    }
+    .footer {
+  background:  rgb(72, 74, 77);
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+  </style>
+</head>
+<body>
+  <!-- ===== NAVBAR ===== -->
+ <nav>
+     <a  href="index.html"  class="a" data-text="Awesome">
+        <span class="actual-text">Facturation </span>
+        <span aria-hidden="true" class="hover-text">Facturation </span>
+    </a> 
+ </nav>
+
+  <!-- ===== FORM CONTENT ===== -->
+  <div class="content-center">
+    <div class="form-box">
+      <h2>Connexion</h2>
+      <form action="/login_check" method="post">
+        <input type="hidden" name="_csrf_token" value="Nt8rjMcZxRHdGccnaqev_VKr6ZqKdYZiRGYkC-Ck6Ns" />
+        <input type="text" id="username" name="_username" required placeholder="Nom d'utilisateur" />
+        <input type="password" id="password" name="_password" required placeholder="Mot de passe" />
+        <div class="remember">
+          <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+          <label for="remember_me">Se souvenir de moi</label>
+          <a href="index3.html">Mot de passe oublié?</a>
+        </div>
+        <a type="submit" class="btn-anim">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Connexion
+        </a>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+ <footer class="footer bg-dark text-white py-4">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-12 text-center">
+        <p class="mb-0">&copy; <span id="year"></span> - Abdeljalil.tn</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+  const currentYear = new Date().getFullYear();
+  document.getElementById('year').textContent = currentYear;
+</script>
+</body>
+</html>

@@ -72,8 +72,8 @@ html {
 }
 
 .navbar-brand {
-    font-weight: 700;
-    font-size: 1.5rem;
+    font-weight: 950;
+    font-size: 1.8rem;
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -86,7 +86,7 @@ html {
 }
 
 .navbar-nav .nav-link {
-    font-weight: 500;
+    font-weight: 800;
     color: var(--dark-color) !important;
     margin: 0 0.5rem;
     position: relative;
@@ -115,18 +115,10 @@ html {
     display: flex;
     align-items: center;
     position: relative;
-    background: var(--gradient-primary);
+     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('image.jpg') no-repeat center center/cover;
     overflow: hidden;
 }
 
-.hero-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
 
 .floating-shapes {
     position: absolute;
@@ -312,6 +304,7 @@ section {
 }
 
 .section-title {
+    font-family: Times New Roman;
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
@@ -375,7 +368,7 @@ section {
 .service-card:hover .service-icon,
 .service-card:hover h4,
 .service-card:hover p {
-    color: rgb(130, 139, 176);
+    color: rgb(255, 255, 255);
     z-index: 2;
     position: relative;
 }
@@ -400,6 +393,7 @@ section {
 }
 
 .service-card h4 {
+    font-family: arial;
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 1rem;
@@ -409,7 +403,7 @@ section {
 }
 
 .service-card p {
-    color: #3e6681;
+    color: #74738b;
     position: relative;
     z-index: 2;
     transition: var(--transition-fast);
@@ -436,7 +430,7 @@ section {
 
 .service-overlay ul {
     list-style: none;
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
 }
 
@@ -484,7 +478,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(172, 181, 223, 0.9);
+    background: rgba(254, 254, 255, 0.9);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -498,7 +492,7 @@ section {
 
 .reference-content {
     text-align: center;
-    color: white;
+    color: rgb(3, 3, 3);
 }
 
 .reference-content h5 {
@@ -508,6 +502,7 @@ section {
 }
 
 .reference-content .btn {
+    color: #000;
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -530,27 +525,27 @@ section {
 }
 
 /* Pricing Cards */
+
 .pricing-card {
     background: white;
     border-radius: 20px;
     padding: 2rem;
     text-align: center;
-    box-shadow: var(--shadow-light);
+   box-shadow: 0 4px 15px rgba(70, 59, 147, 0.3);
     transition: var(--transition-fast);
     position: relative;
     height: 100%;
     border: 2px solid transparent;
+ 
 }
 
 .pricing-card:hover {
     transform: translateY(-10px);
-    box-shadow: var(--shadow-heavy);
+    box-shadow: #95bcdf;
+    border-color: var(--primary-color);
 }
 
-.pricing-card.popular {
-    border-color: var(--primary-color);
-    transform: scale(1.05);
-}
+
 
 .popular-badge {
     background: var(--gradient-primary);
@@ -598,7 +593,7 @@ section {
 }
 
 .facturation-description {
-    background: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('obamSk84.jpg') no-repeat center center/cover;
     padding: 2rem;
     border-radius: 20px;
     box-shadow: var(--shadow-light);
@@ -608,11 +603,37 @@ section {
 .feature-list {
     list-style: none;
     padding: 0;
+    color: #ffffff;
 }
+.mb-4 strong{
+    color: #c09fe7;
 
+}
+.mb-4{
+    color:#f1f1f1;
+}
 .feature-list li {
     padding: 0.5rem 0;
 }
+ .btn-primary {
+            background: var(--primary-color);
+            color: rgb(255, 255, 255);
+            padding: 15px 35px;
+            border-radius: 30px;
+            font-weight: 400;
+            font-size: 16px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(1, 73, 253, 0.3);
+        }
+        
+        .btn-primary:hover {
+            color: rgb(247, 248, 249);
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
 
 /* Contact Styles */
 .contact-info {
@@ -649,11 +670,15 @@ section {
 }
 
 .contact-details p {
-    color: #6c757d;
+    color: #655a6c;
     margin: 0;
 }
 
 /* Contact Form */
+
+.py{
+    background-color: #cfdce8;
+}
 .contact-form-wrapper {
     background: white;
     padding: 2rem;
@@ -714,7 +739,7 @@ section {
 
 /* Testimonials */
 .testimonial-card {
-    background: white;
+    background-color: #6a7d8d;
     padding: 2rem;
     border-radius: 20px;
     box-shadow: var(--shadow-light);
@@ -733,7 +758,7 @@ section {
 
 .testimonial-content p {
     font-style: italic;
-    color: #6c757d;
+    color: #ffffff;
     line-height: 1.6;
 }
 
@@ -753,17 +778,25 @@ section {
 .author-info h5 {
     font-weight: 600;
     margin-bottom: 0.25rem;
-    color: var(--primary-color);
+    color: #000000;
 }
 
 .author-info span {
-    color: #6c757d;
+    color: #000000;
     font-size: 0.9rem;
+    font-family: Times New Roman;
 }
-
 /* Footer */
 .footer {
-    background: var(--dark-color) !important;
+  background: var(--dark-color, #222); /* couleur par défaut si la variable n'est pas définie */
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+  text-align: center; /* centrer le texte */
 }
 
 

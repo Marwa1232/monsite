@@ -197,10 +197,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
 
-    // Observe elements for animation
-    document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in').forEach(el => {
-        observer.observe(el);
-    });
+   
 
     // Service card hover effects
     const serviceCards = document.querySelectorAll('.service-card');
@@ -304,34 +301,7 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(style);
 
-    // Loading screen
-    window.addEventListener('load', function() {
-        const loading = document.querySelector('.loading');
-        if (loading) {
-            setTimeout(() => {
-                loading.classList.add('hidden');
-                setTimeout(() => loading.remove(), 800);
-            }, 1000);
-        }
-    });
-
-    // Cursor trail effect (optional)
-    let mouseX = 0, mouseY = 0;
-    let trailX = 0, trailY = 0;
-
-    document.addEventListener('mousemove', function(e) {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-    });
-
-    function animateTrail() {
-        trailX += (mouseX - trailX) * 0.1;
-        trailY += (mouseY - trailY) * 0.1;
-        
-        requestAnimationFrame(animateTrail);
-    }
-
-    animateTrail();
+    
 
     // Performance optimization: Throttle scroll events
     let ticking = false;
